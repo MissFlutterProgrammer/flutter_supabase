@@ -60,7 +60,9 @@ class _StartPageState extends State<StartPage> {
                       return null;
                     },
                     controller: _emailController,
-                    decoration: const InputDecoration(label: Text("Email")),
+                    decoration: const InputDecoration(
+                      label: Text("Email"),
+                    ),
                     keyboardType: TextInputType.emailAddress,
                   ),
 
@@ -73,12 +75,12 @@ class _StartPageState extends State<StartPage> {
                       return null;
                     },
                     controller: _passwordController,
-                    decoration: const InputDecoration(label: Text("Password")),
+                    decoration: const InputDecoration(
+                      label: Text("Password"),
+                    ),
                     obscureText: true,
                   ),
-                  const SizedBox(
-                    height: 25,
-                  ),
+                  const SizedBox(height: 25),
                   _signInLoading
                       ? const Center(
                           child: CircularProgressIndicator(),
@@ -154,20 +156,16 @@ class _StartPageState extends State<StartPage> {
                           child: const Text("Sign Up"),
                         ),
 
-                  const Row(
-                    children: [
-                      Expanded(
-                        child: Divider(),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.all(15),
-                        child: Text("OR"),
-                      ),
-                      Expanded(
-                        child: Divider(),
-                      ),
-                    ],
-                  ),
+                  Row(children: const [
+                    Expanded(
+                      child: Divider(),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.all(15),
+                      child: Text("OR"),
+                    ),
+                    Expanded(child: Divider()),
+                  ]),
 
                   _googleSignInLoading
                       ? const Center(
@@ -188,7 +186,7 @@ class _StartPageState extends State<StartPage> {
                               );
                             } catch (e) {
                               ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(
+                                SnackBar(
                                   content: Text("Sign Up Failed"),
                                   backgroundColor: Colors.red,
                                 ),
@@ -205,7 +203,7 @@ class _StartPageState extends State<StartPage> {
                           label: const Text(
                             "Continue with Google",
                           ),
-                        )
+                        ),
                 ],
               ),
             ),

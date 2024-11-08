@@ -21,13 +21,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Supabase',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const AuthPage(),
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Supabase',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: const AuthPage());
   }
 }
 
